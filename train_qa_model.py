@@ -34,7 +34,7 @@ if __name__ == "__main__":
     X = vectorizer.fit_transform(texts)
     y = np.array(labels)
 
-    initial_model = SGDClassifier(loss='log', random_state=42)  # Log-loss for probabilistic output
+    initial_model = SGDClassifier(loss='hinge', random_state=42)  # Hinge loss for online learning
     initial_model.fit(X, y)
 
     print("Initial Model Training Completed.")

@@ -31,7 +31,7 @@ if __name__ == "__main__":
     X = vectorizer.fit_transform(texts)
     y = np.array(labels)
 
-    initial_model = SGDClassifier(loss='log', random_state=42)
+    initial_model = SGDClassifier(loss='hinge', random_state=42)
     initial_model.fit(X, y)
 
     print("Initial Model Loaded.")
